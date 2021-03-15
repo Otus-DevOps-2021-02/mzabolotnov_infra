@@ -24,3 +24,4 @@ jobs:
 
     - name: Run tests
       run: curl https://raw.githubusercontent.com/express42/otus-homeworks/2020-11-GA/run.sh | bash
+
