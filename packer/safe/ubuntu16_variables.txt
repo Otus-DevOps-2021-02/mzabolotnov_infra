@@ -7,13 +7,13 @@
             "folder_id": "{{user `folder_id`}}",
             "source_image_id": "{{user `source_image_id`}}",
             "image_name": "reddit-base-{{timestamp}}",
-            "image_family": "{{user `image_family`}}",
+            "image_family": "reddit-base",
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1",
             "subnet_id": "e2l0tjopgt4kfgghrl2n",
             "zone": "ru-central1-b",
             "use_ipv4_nat": true
-                                 
+                     
         }
               
     ],
@@ -22,8 +22,8 @@
             "type": "shell",
             "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
-
         }
        
     ]
 }
+
