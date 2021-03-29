@@ -1,1 +1,4 @@
 .github/get-pip.py
+packer/variables.json
+packer/safe/note.txt
+packer/safe/ubuntu16_variables.txt
