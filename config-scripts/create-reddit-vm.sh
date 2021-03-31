@@ -4,9 +4,9 @@
 
 if [[ -n "$1" || -n "$2" ]]
 then
-echo "instance $1 image $2"
+echo "instance-name $1 image $2"
 else
-echo "No parameters found."
+echo "create-reddit-vm instance-name image-id. No parameters found."
 exit 1
 fi
 
