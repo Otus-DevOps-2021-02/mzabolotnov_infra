@@ -5,7 +5,6 @@ apt-get -y update
 echo "Sleeping for 45 seconds…"
 sleep 45
 echo "Completed"
-apt install -y ruby-full ruby-bundler build-essential mongodb-org
-# sudo apt-get -y install mongodb-org
+apt install -y mongodb-org
 systemctl start mongod
 systemctl enable mongod
