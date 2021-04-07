@@ -9,6 +9,6 @@ packer/safe/ubuntu16_variables.txt
 .terraform/
 *.sav
 terraform/safe/*
-*.lock.*
+
 
 
