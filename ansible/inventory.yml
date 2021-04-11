@@ -1,0 +1,8 @@
+ all:
+   children:
+    app:
+       hosts:
+          178.154.195.211
+    db:
+       hosts:
+          178.154.197.199
