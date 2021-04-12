@@ -1,0 +1,16 @@
+---
+- name: Install
+  hosts: app
+  tasks:
+     - name: Install git
+       become: true
+       apt:
+        update_cache: yes
+        name: git
+        state: present
+     - name: Clone repo
+       git:
+        repo: https://github.com/express42/reddit.git
+        dest: /home/ubuntu/reddit    
+    
+  
