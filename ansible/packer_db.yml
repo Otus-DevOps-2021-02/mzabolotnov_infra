@@ -4,11 +4,11 @@
   become: true
   tasks:
    - name: Add an Apt signing key, uses whichever key is at the URL
-     ansible.builtin.apt_key:
+     apt_key:
       url: http://www.mongodb.org/static/pgp/server-4.2.asc
       state: present
    - name: Add specified repository into sources list using specified filename
-     ansible.builtin.apt_repository:
+     apt_repository:
       repo: deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse
       state: present
       filename: /etc/apt/sources.list.d/mongodb-org-4.2.list
