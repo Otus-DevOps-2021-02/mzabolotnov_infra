@@ -18,7 +18,7 @@
       name: mongodb-org
       state: present
    - name: Enable and start MongoDM
-     ansible.builtin.systemd:
+     systemd:
       name: mongod
       state: started
       enabled: yes
