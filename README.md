@@ -1,7 +1,2 @@
 # mzabolotnov_infra
-mzabolotnov Infra repository
-ssh -i ~/.ssh/appuser -A appuser@178.154.194.74 -t ssh appuser@10.129.0.22
-bastion_IP = 178.154.194.74
-someinternalhost_IP = 10.129.0.22
-testapp_IP = 178.154.199.54
-testapp_port = 9292
+ Собраны app-db-образы при помощи packer с использованием ansible. Далее, используя ansible, проведена настройка и развертывание MongoDB и приложения. 
