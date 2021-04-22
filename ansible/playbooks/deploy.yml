@@ -8,7 +8,6 @@
        dest: /home/ubuntu/reddit
        version: monolith # <-- Указываем нужную ветку
       notify: reload puma
-
     - name: Bundle install
       bundler:
        state: present
@@ -16,4 +15,4 @@
   handlers:
   - name: reload puma
     become: true
-    systemd: name=puma state=restarted   
+    systemd: name=puma state=restarted

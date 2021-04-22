@@ -12,3 +12,5 @@ terraform/safe/*
 *.retry
 *.lock.info
 */safe/*
+jdauphant.nginx
+vault.key
