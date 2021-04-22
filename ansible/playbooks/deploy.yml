@@ -8,7 +8,6 @@
        dest: /home/ubuntu/reddit
        version: monolith # <-- Указываем нужную ветку
       notify: reload puma
-
     - name: Bundle install
       bundler:
        state: present
