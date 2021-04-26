@@ -1,0 +1,27 @@
+- name: Add an Apt signing key, uses whichever key is at the URL
+  become: true
+  apt_key:
+      url: http://www.mongodb.org/static/pgp/server-4.2.asc
+      state: present
+  tags: install
+- name: Add specified repository into sources list using specified filename
+  become: true
+  apt_repository:
+      repo: deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse
+      state: present
+      filename: /etc/apt/sources.list.d/mongodb-org-4.2.list
+  tags: install
+- name: Install mongodb package
+  become: true
+  apt:
+    name: mongodb-org
+    state: present
+  tags: install
+
+- name: Configure service supervisor
+  become: true
+  systemd:
+    name: mongod
+    enabled: yes
+    state: started
+  tags: install

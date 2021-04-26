@@ -1,0 +1,13 @@
+---
+- name: Install ruby, bundler
+  become: true
+  apt:
+    update_cache: yes
+    name: "{{ item }}"
+    state: present
+  loop:
+    - ruby-full
+    - ruby-bundler
+    - build-essential
+    - git
+  tags: ruby
